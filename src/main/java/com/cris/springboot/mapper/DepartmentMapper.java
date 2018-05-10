@@ -18,13 +18,13 @@ public interface DepartmentMapper {
     public Integer saveDept(Department department);
 
     @Delete("delete from department where id = #{id}")
-    public int removeDept(Integer id);
+    public int removeDeptById(Integer id);
 
     @Update("update department set department_name = #{departmentName} where id = #{id}")
     public int updateDept(Department department);
 
     @Select("select id, department_name from department where id = #{id}")
-    public Department getDept(Integer id);
+    public Department getDeptById(Integer id);
 
 
 
